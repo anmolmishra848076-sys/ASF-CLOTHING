@@ -9,6 +9,8 @@
   <link rel="sitemap" type="application/xml" href="/sitemap.xml">
   <meta property="og:title" content="ASF CLOTHING" />
   <meta property="og:description" content="Premium streetwear — oversized tees, hoodies, and sneakers." />
+  <meta property="og:image" content="https://anmolmishra848076-sys.github.io/ASF-CLOTHING/docs/assets/og-1200x630.png" />
+  <meta name="twitter:card" content="summary_large_image" />
 
   <style>
     :root{
@@ -197,6 +199,7 @@
         "@type": "Organization",
         "name": "ASF CLOTHING",
         "url": "https://anmolmishra848076-sys.github.io/ASF-CLOTHING/",
+        "logo": "https://anmolmishra848076-sys.github.io/ASF-CLOTHING/docs/assets/og-1200x630.png",
         "contactPoint": [{
           "@type": "ContactPoint",
           "contactType": "customer support",
@@ -206,10 +209,17 @@
       {
         "@type": "Product",
         "name": "Oversized T-Shirt",
-        "image": "https://anmolmishra848076-sys.github.io/ASF-CLOTHING/docs/assets/oversized-tshirt-800.svg",
+        "image": [
+          "https://anmolmishra848076-sys.github.io/ASF-CLOTHING/docs/assets/oversized-tshirt-800.svg",
+          "https://anmolmishra848076-sys.github.io/ASF-CLOTHING/docs/assets/oversized-tshirt-800.webp",
+          "https://anmolmishra848076-sys.github.io/ASF-CLOTHING/docs/assets/oversized-tshirt-800.avif"
+        ],
         "description": "Comfortable oversized T‑shirt — breathable cotton, relaxed fit.",
+        "sku": "ASF-TSHIRT-001",
+        "brand": { "@type": "Brand", "name": "ASF" },
         "offers": {
           "@type": "Offer",
+          "url": "https://anmolmishra848076-sys.github.io/ASF-CLOTHING/docs/index.html#p1-title",
           "price": "699",
           "priceCurrency": "INR",
           "availability": "https://schema.org/InStock"
@@ -218,10 +228,17 @@
       {
         "@type": "Product",
         "name": "ASF Hoodie",
-        "image": "https://anmolmishra848076-sys.github.io/ASF-CLOTHING/docs/assets/asf-hoodie-800.svg",
+        "image": [
+          "https://anmolmishra848076-sys.github.io/ASF-CLOTHING/docs/assets/asf-hoodie-800.svg",
+          "https://anmolmishra848076-sys.github.io/ASF-CLOTHING/docs/assets/asf-hoodie-800.webp",
+          "https://anmolmishra848076-sys.github.io/ASF-CLOTHING/docs/assets/asf-hoodie-800.avif"
+        ],
         "description": "Warm ASF-branded hoodie with soft brushed interior.",
+        "sku": "ASF-HOODIE-001",
+        "brand": { "@type": "Brand", "name": "ASF" },
         "offers": {
           "@type": "Offer",
+          "url": "https://anmolmishra848076-sys.github.io/ASF-CLOTHING/docs/index.html#p2-title",
           "price": "1299",
           "priceCurrency": "INR",
           "availability": "https://schema.org/InStock"
@@ -230,10 +247,17 @@
       {
         "@type": "Product",
         "name": "Sneakers",
-        "image": "https://anmolmishra848076-sys.github.io/ASF-CLOTHING/docs/assets/sneakers-800.svg",
+        "image": [
+          "https://anmolmishra848076-sys.github.io/ASF-CLOTHING/docs/assets/sneakers-800.svg",
+          "https://anmolmishra848076-sys.github.io/ASF-CLOTHING/docs/assets/sneakers-800.webp",
+          "https://anmolmishra848076-sys.github.io/ASF-CLOTHING/docs/assets/sneakers-800.avif"
+        ],
         "description": "Lightweight sneakers with grippy sole and modern silhouette.",
+        "sku": "ASF-SNK-001",
+        "brand": { "@type": "Brand", "name": "ASF" },
         "offers": {
           "@type": "Offer",
+          "url": "https://anmolmishra848076-sys.github.io/ASF-CLOTHING/docs/index.html#p3-title",
           "price": "1999",
           "priceCurrency": "INR",
           "availability": "https://schema.org/InStock"
@@ -282,13 +306,11 @@
 
         <div class="grid" role="list">
           <article class="card" role="listitem" aria-labelledby="p1-title">
-            <img
-              src="/docs/assets/oversized-tshirt.svg"
-              srcset="/docs/assets/oversized-tshirt-400.svg 400w, /docs/assets/oversized-tshirt-800.svg 800w"
-              sizes="(max-width:720px) 100vw, 33vw"
-              alt="Light-colored oversized T-shirt laid flat"
-              loading="lazy"
-            />
+            <picture>
+              <source type="image/avif" srcset="/docs/assets/oversized-tshirt-800.avif 800w, /docs/assets/oversized-tshirt-400.avif 400w">
+              <source type="image/webp" srcset="/docs/assets/oversized-tshirt-800.webp 800w, /docs/assets/oversized-tshirt-400.webp 400w">
+              <img src="/docs/assets/oversized-tshirt.svg" srcset="/docs/assets/oversized-tshirt-400.svg 400w, /docs/assets/oversized-tshirt-800.svg 800w" sizes="(max-width:720px) 100vw, 33vw" alt="Light-colored oversized T-shirt laid flat" loading="lazy">
+            </picture>
             <h4 id="p1-title">Oversized T-Shirt</h4>
             <div class="meta">
               <div class="price" aria-label="Price in Indian Rupees">₹699</div>
@@ -297,13 +319,11 @@
           </article>
 
           <article class="card" role="listitem" aria-labelledby="p2-title">
-            <img
-              src="/docs/assets/asf-hoodie.svg"
-              srcset="/docs/assets/asf-hoodie-400.svg 400w, /docs/assets/asf-hoodie-800.svg 800w"
-              sizes="(max-width:720px) 100vw, 33vw"
-              alt="Black hoodie on hanger"
-              loading="lazy"
-            />
+            <picture>
+              <source type="image/avif" srcset="/docs/assets/asf-hoodie-800.avif 800w, /docs/assets/asf-hoodie-400.avif 400w">
+              <source type="image/webp" srcset="/docs/assets/asf-hoodie-800.webp 800w, /docs/assets/asf-hoodie-400.webp 400w">
+              <img src="/docs/assets/asf-hoodie.svg" srcset="/docs/assets/asf-hoodie-400.svg 400w, /docs/assets/asf-hoodie-800.svg 800w" sizes="(max-width:720px) 100vw, 33vw" alt="Black hoodie on hanger" loading="lazy">
+            </picture>
             <h4 id="p2-title">ASF Hoodie</h4>
             <div class="meta">
               <div class="price" aria-label="Price in Indian Rupees">₹1299</div>
@@ -312,13 +332,11 @@
           </article>
 
           <article class="card" role="listitem" aria-labelledby="p3-title">
-            <img
-              src="/docs/assets/sneakers.svg"
-              srcset="/docs/assets/sneakers-400.svg 400w, /docs/assets/sneakers-800.svg 800w"
-              sizes="(max-width:720px) 100vw, 33vw"
-              alt="White sneakers on a dark background"
-              loading="lazy"
-            />
+            <picture>
+              <source type="image/avif" srcset="/docs/assets/sneakers-800.avif 800w, /docs/assets/sneakers-400.avif 400w">
+              <source type="image/webp" srcset="/docs/assets/sneakers-800.webp 800w, /docs/assets/sneakers-400.webp 400w">
+              <img src="/docs/assets/sneakers.svg" srcset="/docs/assets/sneakers-400.svg 400w, /docs/assets/sneakers-800.svg 800w" sizes="(max-width:720px) 100vw, 33vw" alt="White sneakers on a dark background" loading="lazy">
+            </picture>
             <h4 id="p3-title">Sneakers</h4>
             <div class="meta">
               <div class="price" aria-label="Price in Indian Rupees">₹1999</div>
