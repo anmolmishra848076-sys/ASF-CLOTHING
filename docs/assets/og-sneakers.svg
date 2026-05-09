@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="100%" height="100%" fill="#0f0f0f" />
+  <g transform="translate(40,40)">
+    <rect width="120" height="40" rx="6" fill="#ffffff" opacity="0.08" />
+    <text x="12" y="28" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#ffffff">ASF</text>
+  </g>
+  <text x="50%" y="50%" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="56" fill="#ffffff">Sneakers</text>
+  <rect x="220" y="340" width="760" height="2" fill="#ffffff" opacity="0.06" />
+</svg>
