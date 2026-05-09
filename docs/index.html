@@ -6,6 +6,18 @@
   <meta name="description" content="ASF CLOTHING — Streetwear: Oversized tees, hoodies, and sneakers. Premium fashion for the new generation." />
   <title>ASF CLOTHING</title>
 
+  <!-- SEO / Social -->
+  <link rel="canonical" href="https://anmolmishra848076-sys.github.io/ASF-CLOTHING/" />
+  <meta property="og:title" content="ASF CLOTHING — New Streetwear Drop" />
+  <meta property="og:description" content="Premium streetwear: oversized tees, hoodies, and sneakers. Shop the new drop." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://anmolmishra848076-sys.github.io/ASF-CLOTHING/" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1500&q=80" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ASF CLOTHING — New Streetwear Drop" />
+  <meta name="twitter:description" content="Premium streetwear: oversized tees, hoodies, and sneakers." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1500&q=80" />
+
   <style>
     :root{
       --bg:#0f0f0f;
@@ -143,6 +155,13 @@
 
     .card .meta{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:8px}
 
+    /* Contact form */
+    .contact-form{max-width:640px;margin:24px auto 0;background:var(--panel);padding:18px;border-radius:8px}
+    .contact-form label{display:block;color:var(--muted);font-size:.95rem;margin-bottom:6px}
+    .contact-form input,.contact-form textarea{width:100%;padding:10px;border-radius:6px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--accent);margin-bottom:12px}
+    .contact-form button{display:inline-block;padding:10px 16px;border-radius:6px;border:none;background:var(--accent);color:#000;font-weight:700;cursor:pointer}
+    .form-success{color:#8fd19e;margin-top:8px}
+
     /* Footer */
     footer.site-footer{
       background:#000;
@@ -171,6 +190,26 @@
         const expanded = this.getAttribute('aria-expanded') === 'true';
         this.setAttribute('aria-expanded', String(!expanded));
         nav.classList.toggle('nav-open');
+      });
+
+      // Contact form handling: opens default mail client with form contents (mailto fallback)
+      const form = document.getElementById('contactForm');
+      form && form.addEventListener('submit', function(e){
+        e.preventDefault();
+        const name = document.getElementById('c-name').value.trim();
+        const email = document.getElementById('c-email').value.trim();
+        const message = document.getElementById('c-message').value.trim();
+        if(!name || !email || !message){
+          alert('Please complete all fields before sending.');
+          return;
+        }
+        const subject = encodeURIComponent('Website contact from ' + name);
+        const body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message);
+        // Opens user's email client. Replace hello@asf.example with your real inbox to receive mails directly.
+        window.location.href = 'mailto:hello@asf.example?subject=' + subject + '&body=' + body;
+        // Show a quick success state
+        const success = document.getElementById('formSuccess');
+        success.textContent = 'Your mail client should now open. If it does not, please email hello@asf.example directly.';
       });
     });
   </script>
@@ -214,8 +253,8 @@
         <div class="grid" role="list">
           <article class="card" role="listitem" aria-labelledby="p1-title">
             <img
-              src="/docs/assets/oversized-tshirt.jpg"
-              srcset="/docs/assets/oversized-tshirt-400.jpg 400w, /docs/assets/oversized-tshirt-800.jpg 800w"
+              src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1500&q=80"
+              srcset="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80 400w, https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=800&q=80 800w"
               sizes="(max-width:720px) 100vw, 33vw"
               alt="Light-colored oversized T-shirt laid flat"
               loading="lazy"
@@ -229,8 +268,8 @@
 
           <article class="card" role="listitem" aria-labelledby="p2-title">
             <img
-              src="/docs/assets/asf-hoodie.jpg"
-              srcset="/docs/assets/asf-hoodie-400.jpg 400w, /docs/assets/asf-hoodie-800.jpg 800w"
+              src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&fit=crop&w=1500&q=80"
+              srcset="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&fit=crop&w=400&q=80 400w, https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&fit=crop&w=800&q=80 800w"
               sizes="(max-width:720px) 100vw, 33vw"
               alt="Black hoodie on hanger"
               loading="lazy"
@@ -244,8 +283,8 @@
 
           <article class="card" role="listitem" aria-labelledby="p3-title">
             <img
-              src="/docs/assets/sneakers.jpg"
-              srcset="/docs/assets/sneakers-400.jpg 400w, /docs/assets/sneakers-800.jpg 800w"
+              src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=1500&q=80"
+              srcset="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80 400w, https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=800&q=80 800w"
               sizes="(max-width:720px) 100vw, 33vw"
               alt="White sneakers on a dark background"
               loading="lazy"
@@ -257,6 +296,25 @@
             </div>
           </article>
         </div>
+
+        <!-- Contact form (simple mailto fallback) -->
+        <section id="contact" aria-labelledby="contact-heading" style="margin-top:28px">
+          <h3 id="contact-heading" style="margin:0 0 12px">Contact Us</h3>
+          <form id="contactForm" class="contact-form" novalidate>
+            <label for="c-name">Name</label>
+            <input id="c-name" name="name" type="text" required />
+
+            <label for="c-email">Email</label>
+            <input id="c-email" name="email" type="email" required />
+
+            <label for="c-message">Message</label>
+            <textarea id="c-message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+            <div id="formSuccess" class="form-success" role="status" aria-live="polite"></div>
+          </form>
+        </section>
+
       </div>
     </section>
 
@@ -265,7 +323,7 @@
     </section>
   </main>
 
-  <footer id="contact" class="site-footer" role="contentinfo">
+  <footer class="site-footer" role="contentinfo">
     <div class="container">
       <small>© ASF CLOTHING | All Rights Reserved</small>
       <div style="margin-top:8px;color:var(--muted);font-size:.9rem">Made with care • Contact: hello@asf.example</div>
