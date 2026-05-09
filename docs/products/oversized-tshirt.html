@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Oversized T-Shirt — ASF CLOTHING</title>
+  <meta name="description" content="Oversized T-Shirt — breathable cotton, relaxed fit. Buy from ASF CLOTHING." />
+  <link rel="canonical" href="https://anmolmishra848076-sys.github.io/ASF-CLOTHING/products/oversized-tshirt.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Oversized T-Shirt — ASF CLOTHING" />
+  <meta property="og:description" content="Comfortable oversized T‑shirt — breathable cotton, relaxed fit. ₹699" />
+  <meta property="og:image" content="https://anmolmishra848076-sys.github.io/ASF-CLOTHING/docs/assets/oversized-tshirt-800.webp" />
+  <meta property="og:type" content="product" />
+
+  <style>body{margin:20px;font-family:Arial,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",sans-serif;background:#0f0f0f;color:#fff}a{color:#fff}</style>
+</head>
+<body>
+  <a href="/ASF-CLOTHING/">← Back</a>
+  <h1>Oversized T-Shirt</h1>
+  <p>Comfortable oversized T‑shirt — breathable cotton, relaxed fit.</p>
+  <p><strong>Price: ₹699</strong></p>
+  <a class="btn buy-btn" data-product-id="ASF-TSHIRT-001" href="mailto:anmolmishra848076@email.com">Contact to buy</a>
+
+  <script>
+    // Fire view_item event when product page is loaded (if analytics available and consent granted)
+    (function(){
+      var pid = 'ASF-TSHIRT-001';
+      var pname = 'Oversized T-Shirt';
+      document.addEventListener('DOMContentLoaded', function(){
+        if(typeof gtag === 'function'){
+          gtag('event','view_item',{ 'items':[{'id':pid,'name':pname,'price':699}] });
+        }
+        // attach buy button event too
+        var btn = document.querySelector('.buy-btn');
+        if(btn) btn.addEventListener('click', function(){ if(typeof gtag==='function'){ gtag('event','select_item',{ 'items':[{'id':pid,'name':pname}] }); gtag('event','contact_click',{'event_category':'engagement','event_label':pid}); } });
+      });
+    })();
+  </script>
+</body>
+</html>

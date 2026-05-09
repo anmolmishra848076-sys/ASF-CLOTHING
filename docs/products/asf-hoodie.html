@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ASF Hoodie — ASF CLOTHING</title>
+  <meta name="description" content="ASF Hoodie — warm ASF-branded hoodie with soft brushed interior. Buy from ASF CLOTHING." />
+  <link rel="canonical" href="https://anmolmishra848076-sys.github.io/ASF-CLOTHING/products/asf-hoodie.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ASF Hoodie — ASF CLOTHING" />
+  <meta property="og:description" content="Warm ASF-branded hoodie with soft brushed interior. ₹1299" />
+  <meta property="og:image" content="https://anmolmishra848076-sys.github.io/ASF-CLOTHING/docs/assets/asf-hoodie-800.webp" />
+  <meta property="og:type" content="product" />
+
+  <style>body{margin:20px;font-family:Arial,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",sans-serif;background:#0f0f0f;color:#fff}a{color:#fff}</style>
+</head>
+<body>
+  <a href="/ASF-CLOTHING/">← Back</a>
+  <h1>ASF Hoodie</h1>
+  <p>Warm ASF-branded hoodie with soft brushed interior.</p>
+  <p><strong>Price: ₹1299</strong></p>
+  <a class="btn buy-btn" data-product-id="ASF-HOODIE-001" href="mailto:anmolmishra848076@email.com">Contact to buy</a>
+
+  <script>
+    (function(){
+      var pid = 'ASF-HOODIE-001';
+      var pname = 'ASF Hoodie';
+      document.addEventListener('DOMContentLoaded', function(){
+        if(typeof gtag === 'function'){
+          gtag('event','view_item',{ 'items':[{'id':pid,'name':pname,'price':1299}] });
+        }
+        var btn = document.querySelector('.buy-btn');
+        if(btn) btn.addEventListener('click', function(){ if(typeof gtag==='function'){ gtag('event','select_item',{ 'items':[{'id':pid,'name':pname}] }); gtag('event','contact_click',{'event_category':'engagement','event_label':pid}); } });
+      });
+    })();
+  </script>
+</body>
+</html>

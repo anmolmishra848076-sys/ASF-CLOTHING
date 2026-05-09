@@ -121,34 +121,6 @@
     }
     .btn:focus{outline:3px solid rgba(255,255,255,0.2)}
 
-    /* Products */
-    .products{
-      padding:40px 16px;
-    }
-    .grid{
-      display:grid;
-      gap:20px;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      max-width:var(--container);
-      margin:0 auto;
-    }
-    .card{
-      background:var(--panel);
-      padding:16px;
-      border-radius:var(--radius);
-      text-align:center;
-      display:flex;
-      flex-direction:column;
-      gap:12px;
-      transition:transform .12s ease, box-shadow .12s ease;
-    }
-    .card:hover{transform:translateY(-4px);box-shadow:0 6px 18px rgba(0,0,0,0.5)}
-    .card img{width:100%;height:200px;object-fit:cover;border-radius:8px}
-    .card h2{font-size:1.05rem;margin:0}
-    .price{color:var(--muted);font-weight:700}
-
-    .card .meta{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:8px}
-
     /* Footer */
     footer.site-footer{
       background:#000;
@@ -164,7 +136,6 @@
       .nav-links{display:none}
       .nav-open .nav-links{display:flex;flex-direction:column;gap:8px;width:100%;padding-top:8px}
       .hero{padding:36px 12px}
-      .card img{height:180px}
     }
   </style>
 
@@ -179,101 +150,6 @@
         nav.classList.toggle('nav-open');
       });
     });
-  </script>
-
-  <!-- Google Analytics (GA4) - add your Measurement ID and remove the placeholder G-XXXXXXX -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);} 
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXX', { 'anonymize_ip': true });
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "url": "https://anmolmishra848076-sys.github.io/ASF-CLOTHING/",
-        "name": "ASF CLOTHING",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://anmolmishra848076-sys.github.io/ASF-CLOTHING/?s={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
-      },
-      {
-        "@type": "Organization",
-        "name": "ASF CLOTHING",
-        "url": "https://anmolmishra848076-sys.github.io/ASF-CLOTHING/",
-        "logo": "https://anmolmishra848076-sys.github.io/ASF-CLOTHING/docs/assets/og-1200x630.png",
-        "contactPoint": [{
-          "@type": "ContactPoint",
-          "contactType": "customer support",
-          "email": "mailto:anmolmishra848076@email.com"
-        }]
-      },
-      {
-        "@type": "Product",
-        "name": "Oversized T-Shirt",
-        "image": [
-          "https://anmolmishra848076-sys.github.io/ASF-CLOTHING/docs/assets/oversized-tshirt-800.svg",
-          "https://anmolmishra848076-sys.github.io/ASF-CLOTHING/docs/assets/oversized-tshirt-800.webp",
-          "https://anmolmishra848076-sys.github.io/ASF-CLOTHING/docs/assets/oversized-tshirt-800.avif"
-        ],
-        "description": "Comfortable oversized T‑shirt — breathable cotton, relaxed fit.",
-        "sku": "ASF-TSHIRT-001",
-        "brand": { "@type": "Brand", "name": "ASF" },
-        "offers": {
-          "@type": "Offer",
-          "url": "https://anmolmishra848076-sys.github.io/ASF-CLOTHING/docs/index.html#p1-title",
-          "price": "699",
-          "priceCurrency": "INR",
-          "availability": "https://schema.org/InStock"
-        }
-      },
-      {
-        "@type": "Product",
-        "name": "ASF Hoodie",
-        "image": [
-          "https://anmolmishra848076-sys.github.io/ASF-CLOTHING/docs/assets/asf-hoodie-800.svg",
-          "https://anmolmishra848076-sys.github.io/ASF-CLOTHING/docs/assets/asf-hoodie-800.webp",
-          "https://anmolmishra848076-sys.github.io/ASF-CLOTHING/docs/assets/asf-hoodie-800.avif"
-        ],
-        "description": "Warm ASF-branded hoodie with soft brushed interior.",
-        "sku": "ASF-HOODIE-001",
-        "brand": { "@type": "Brand", "name": "ASF" },
-        "offers": {
-          "@type": "Offer",
-          "url": "https://anmolmishra848076-sys.github.io/ASF-CLOTHING/docs/index.html#p2-title",
-          "price": "1299",
-          "priceCurrency": "INR",
-          "availability": "https://schema.org/InStock"
-        }
-      },
-      {
-        "@type": "Product",
-        "name": "Sneakers",
-        "image": [
-          "https://anmolmishra848076-sys.github.io/ASF-CLOTHING/docs/assets/sneakers-800.svg",
-          "https://anmolmishra848076-sys.github.io/ASF-CLOTHING/docs/assets/sneakers-800.webp",
-          "https://anmolmishra848076-sys.github.io/ASF-CLOTHING/docs/assets/sneakers-800.avif"
-        ],
-        "description": "Lightweight sneakers with grippy sole and modern silhouette.",
-        "sku": "ASF-SNK-001",
-        "brand": { "@type": "Brand", "name": "ASF" },
-        "offers": {
-          "@type": "Offer",
-          "url": "https://anmolmishra848076-sys.github.io/ASF-CLOTHING/docs/index.html#p3-title",
-          "price": "1999",
-          "priceCurrency": "INR",
-          "availability": "https://schema.org/InStock"
-        }
-      }
-    ]
-  }
   </script>
 
 </head>
@@ -315,50 +191,35 @@
 
         <div class="grid" role="list">
           <article class="card" role="listitem" aria-labelledby="p1-title">
-            <picture>
-              <source type="image/avif" srcset="/docs/assets/oversized-tshirt-800.avif 800w, /docs/assets/oversized-tshirt-400.avif 400w">
-              <source type="image/webp" srcset="/docs/assets/oversized-tshirt-800.webp 800w, /docs/assets/oversized-tshirt-400.webp 400w">
-              <img src="/docs/assets/oversized-tshirt.svg" srcset="/docs/assets/oversized-tshirt-400.svg 400w, /docs/assets/oversized-tshirt-800.svg 800w" sizes="(max-width:720px) 100vw, 33vw" alt="Light-colored oversized T-shirt laid flat" loading="lazy">
-            </picture>
-            <h4 id="p1-title">Oversized T-Shirt</h4>
+            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=800&auto=format&fit=crop" alt="Tshirt">
+            <h4 id="p1-title"><a href="docs/products/oversized-tshirt.html" style="color:inherit;text-decoration:none">Oversized T-Shirt</a></h4>
             <div class="meta">
               <div class="price" aria-label="Price in Indian Rupees">₹699</div>
-              <a class="btn" href="mailto:anmolmishra848076@email.com" aria-label="Contact to buy Oversized T-Shirt">Buy</a>
+              <a class="btn buy-btn" data-product-id="ASF-TSHIRT-001" href="mailto:anmolmishra848076@email.com" aria-label="Contact to buy Oversized T-Shirt">Buy</a>
             </div>
           </article>
 
           <article class="card" role="listitem" aria-labelledby="p2-title">
-            <picture>
-              <source type="image/avif" srcset="/docs/assets/asf-hoodie-800.avif 800w, /docs/assets/asf-hoodie-400.avif 400w">
-              <source type="image/webp" srcset="/docs/assets/asf-hoodie-800.webp 800w, /docs/assets/asf-hoodie-400.webp 400w">
-              <img src="/docs/assets/asf-hoodie.svg" srcset="/docs/assets/asf-hoodie-400.svg 400w, /docs/assets/asf-hoodie-800.svg 800w" sizes="(max-width:720px) 100vw, 33vw" alt="Black hoodie on hanger" loading="lazy">
-            </picture>
-            <h4 id="p2-title">ASF Hoodie</h4>
+            <img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1" alt="Hoodie">
+            <h4 id="p2-title"><a href="docs/products/asf-hoodie.html" style="color:inherit;text-decoration:none">ASF Hoodie</a></h4>
             <div class="meta">
               <div class="price" aria-label="Price in Indian Rupees">₹1299</div>
-              <a class="btn" href="mailto:anmolmishra848076@email.com" aria-label="Contact to buy ASF Hoodie">Buy</a>
+              <a class="btn buy-btn" data-product-id="ASF-HOODIE-001" href="mailto:anmolmishra848076@email.com" aria-label="Contact to buy ASF Hoodie">Buy</a>
             </div>
           </article>
 
           <article class="card" role="listitem" aria-labelledby="p3-title">
-            <picture>
-              <source type="image/avif" srcset="/docs/assets/sneakers-800.avif 800w, /docs/assets/sneakers-400.avif 400w">
-              <source type="image/webp" srcset="/docs/assets/sneakers-800.webp 800w, /docs/assets/sneakers-400.webp 400w">
-              <img src="/docs/assets/sneakers.svg" srcset="/docs/assets/sneakers-400.svg 400w, /docs/assets/sneakers-800.svg 800w" sizes="(max-width:720px) 100vw, 33vw" alt="White sneakers on a dark background" loading="lazy">
-            </picture>
-            <h4 id="p3-title">Sneakers</h4>
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" alt="Shoes">
+            <h4 id="p3-title"><a href="docs/products/sneakers.html" style="color:inherit;text-decoration:none">Sneakers</a></h4>
             <div class="meta">
               <div class="price" aria-label="Price in Indian Rupees">₹1999</div>
-              <a class="btn" href="mailto:anmolmishra848076@email.com" aria-label="Contact to buy Sneakers">Buy</a>
+              <a class="btn buy-btn" data-product-id="ASF-SNK-001" href="mailto:anmolmishra848076@email.com" aria-label="Contact to buy Sneakers">Buy</a>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="new" class="container" aria-hidden="true" style="display:none">
-      <!-- Placeholder for future 'New Arrivals' content -->
-    </section>
   </main>
 
   <footer id="contact" class="site-footer" role="contentinfo">
@@ -367,5 +228,57 @@
       <div style="margin-top:8px;color:var(--muted);font-size:.9rem">Made with care • Contact: <a href="mailto:anmolmishra848076@email.com" style="color:inherit;text-decoration:underline">anmolmishra848076@email.com</a></div>
     </div>
   </footer>
+
+  <!-- Cookie consent banner (root) -->
+  <div id="asfCookieRoot" class="cookie-banner" style="display:none">
+    <p>We use analytics cookies to improve the site. By clicking Accept you consent to analytics tracking.</p>
+    <div style="margin-left:auto;display:flex;gap:8px;align-items:center">
+      <button id="asfAcceptRoot">Accept</button>
+      <button id="asfRejectRoot" style="background:transparent;border:1px solid rgba(255,255,255,0.12);color:#fff;padding:8px 12px;border-radius:6px">Reject</button>
+    </div>
+  </div>
+
+  <script>
+    // Cookie consent handling and event tracking for root index
+    (function(){
+      var banner = document.getElementById('asfCookieRoot');
+      var accept = document.getElementById('asfAcceptRoot');
+      var reject = document.getElementById('asfRejectRoot');
+      var CONSENT_KEY = 'asf_analytics_consent';
+
+      function hasConsent(){ return localStorage.getItem(CONSENT_KEY) === 'granted'; }
+      function denied(){ return localStorage.getItem(CONSENT_KEY) === 'denied'; }
+
+      function showBanner(){ if(!hasConsent() && !denied()){ banner.style.display = 'flex'; }}
+      function hideBanner(){ banner.style.display = 'none'; }
+
+      accept.addEventListener('click', function(){
+        localStorage.setItem(CONSENT_KEY,'granted');
+        hideBanner();
+        try{ window.asfGA.load(); } catch(e){}
+        if(typeof gtag === 'function'){
+          gtag('consent','update',{'analytics_storage':'granted'});
+        }
+      });
+
+      reject.addEventListener('click', function(){
+        localStorage.setItem(CONSENT_KEY,'denied');
+        hideBanner();
+      });
+
+      document.addEventListener('DOMContentLoaded', function(){
+        showBanner();
+        document.querySelectorAll('.buy-btn').forEach(function(btn){
+          btn.addEventListener('click', function(){
+            var pid = this.getAttribute('data-product-id') || 'unknown';
+            if(typeof gtag === 'function'){
+              gtag('event','select_item',{ 'items': [{'id': pid, 'name': this.closest('.card').querySelector('h4').innerText}] });
+              gtag('event','contact_click',{ 'event_category':'engagement', 'event_label': pid, 'transport_type': 'beacon' });
+            }
+          });
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
