@@ -181,6 +181,15 @@
     });
   </script>
 
+  <!-- Google Analytics (GA4) - add your Measurement ID and remove the placeholder G-XXXXXXX -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} 
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX', { 'anonymize_ip': true });
+  </script>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
