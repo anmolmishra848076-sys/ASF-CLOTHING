@@ -12,6 +12,15 @@
   <meta property="og:image" content="https://anmolmishra848076-sys.github.io/ASF-CLOTHING/docs/assets/og-1200x630.png" />
   <meta name="twitter:card" content="summary_large_image" />
 
+  <!-- GA4 placeholder: replace G-XXXXXXXXXX with your Measurement ID when ready -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} 
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', { 'send_page_view': true });
+  </script>
+
   <style>
     :root{
       --bg:#0f0f0f;
@@ -149,11 +158,6 @@
 
     .card .meta{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:8px}
 
-    /* Cookie banner */
-    .cookie-banner{position:fixed;left:16px;right:16px;bottom:16px;background:rgba(0,0,0,0.85);color:#fff;padding:14px;border-radius:10px;display:flex;align-items:center;gap:12px;z-index:2000}
-    .cookie-banner p{margin:0;font-size:0.95rem}
-    .cookie-banner button{background:#fff;color:#000;border:none;padding:8px 12px;border-radius:6px;cursor:pointer}
-
     /* Footer */
     footer.site-footer{
       background:#000;
@@ -170,7 +174,6 @@
       .nav-open .nav-links{display:flex;flex-direction:column;gap:8px;width:100%;padding-top:8px}
       .hero{padding:36px 12px}
       .card img{height:180px}
-      .cookie-banner{left:12px;right:12px}
     }
   </style>
 
@@ -185,26 +188,6 @@
         nav.classList.toggle('nav-open');
       });
     });
-  </script>
-
-  <!-- Google Analytics (GA4) placeholder (replace G-XXXXXXX) -->
-  <script>
-    // Lazy loader for GA4 that respects consent. Replace G-XXXXXXX with your Measurement ID later.
-    window.asfGA = {
-      id: 'G-XXXXXXX',
-      loaded: false,
-      load: function() {
-        if (this.loaded || !this.id || this.id === 'G-XXXXXXX') return;
-        var s = document.createElement('script'); s.async = true;
-        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + this.id;
-        document.head.appendChild(s);
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);} window.gtag = gtag;
-        gtag('js', new Date());
-        gtag('config', this.id, { 'anonymize_ip': true });
-        this.loaded = true;
-      }
-    };
   </script>
 
   <script type="application/ld+json">
@@ -231,6 +214,63 @@
           "contactType": "customer support",
           "email": "mailto:anmolmishra848076@email.com"
         }]
+      },
+      {
+        "@type": "Product",
+        "name": "Oversized T-Shirt",
+        "image": [
+          "https://anmolmishra848076-sys.github.io/ASF-CLOTHING/docs/assets/oversized-tshirt-800.svg",
+          "https://anmolmishra848076-sys.github.io/ASF-CLOTHING/docs/assets/oversized-tshirt-800.webp",
+          "https://anmolmishra848076-sys.github.io/ASF-CLOTHING/docs/assets/oversized-tshirt-800.avif"
+        ],
+        "description": "Comfortable oversized T‑shirt — breathable cotton, relaxed fit.",
+        "sku": "ASF-TSHIRT-001",
+        "brand": { "@type": "Brand", "name": "ASF" },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://anmolmishra848076-sys.github.io/ASF-CLOTHING/docs/index.html#p1-title",
+          "price": "699",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock"
+        }
+      },
+      {
+        "@type": "Product",
+        "name": "ASF Hoodie",
+        "image": [
+          "https://anmolmishra848076-sys.github.io/ASF-CLOTHING/docs/assets/asf-hoodie-800.svg",
+          "https://anmolmishra848076-sys.github.io/ASF-CLOTHING/docs/assets/asf-hoodie-800.webp",
+          "https://anmolmishra848076-sys.github.io/ASF-CLOTHING/docs/assets/asf-hoodie-800.avif"
+        ],
+        "description": "Warm ASF-branded hoodie with soft brushed interior.",
+        "sku": "ASF-HOODIE-001",
+        "brand": { "@type": "Brand", "name": "ASF" },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://anmolmishra848076-sys.github.io/ASF-CLOTHING/docs/index.html#p2-title",
+          "price": "1299",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock"
+        }
+      },
+      {
+        "@type": "Product",
+        "name": "Sneakers",
+        "image": [
+          "https://anmolmishra848076-sys.github.io/ASF-CLOTHING/docs/assets/sneakers-800.svg",
+          "https://anmolmishra848076-sys.github.io/ASF-CLOTHING/docs/assets/sneakers-800.webp",
+          "https://anmolmishra848076-sys.github.io/ASF-CLOTHING/docs/assets/sneakers-800.avif"
+        ],
+        "description": "Lightweight sneakers with grippy sole and modern silhouette.",
+        "sku": "ASF-SNK-001",
+        "brand": { "@type": "Brand", "name": "ASF" },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://anmolmishra848076-sys.github.io/ASF-CLOTHING/docs/index.html#p3-title",
+          "price": "1999",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock"
+        }
       }
     ]
   }
@@ -280,10 +320,10 @@
               <source type="image/webp" srcset="/docs/assets/oversized-tshirt-800.webp 800w, /docs/assets/oversized-tshirt-400.webp 400w">
               <img src="/docs/assets/oversized-tshirt.svg" srcset="/docs/assets/oversized-tshirt-400.svg 400w, /docs/assets/oversized-tshirt-800.svg 800w" sizes="(max-width:720px) 100vw, 33vw" alt="Light-colored oversized T-shirt laid flat" loading="lazy">
             </picture>
-            <h4 id="p1-title"><a href="products/oversized-tshirt.html" style="color:inherit;text-decoration:none">Oversized T-Shirt</a></h4>
+            <h4 id="p1-title">Oversized T-Shirt</h4>
             <div class="meta">
               <div class="price" aria-label="Price in Indian Rupees">₹699</div>
-              <a class="btn buy-btn" data-product-id="ASF-TSHIRT-001" href="mailto:anmolmishra848076@email.com" aria-label="Contact to buy Oversized T-Shirt">Buy</a>
+              <a class="btn" href="mailto:anmolmishra848076@email.com" aria-label="Contact to buy Oversized T-Shirt">Buy</a>
             </div>
           </article>
 
@@ -293,10 +333,10 @@
               <source type="image/webp" srcset="/docs/assets/asf-hoodie-800.webp 800w, /docs/assets/asf-hoodie-400.webp 400w">
               <img src="/docs/assets/asf-hoodie.svg" srcset="/docs/assets/asf-hoodie-400.svg 400w, /docs/assets/asf-hoodie-800.svg 800w" sizes="(max-width:720px) 100vw, 33vw" alt="Black hoodie on hanger" loading="lazy">
             </picture>
-            <h4 id="p2-title"><a href="products/asf-hoodie.html" style="color:inherit;text-decoration:none">ASF Hoodie</a></h4>
+            <h4 id="p2-title">ASF Hoodie</h4>
             <div class="meta">
               <div class="price" aria-label="Price in Indian Rupees">₹1299</div>
-              <a class="btn buy-btn" data-product-id="ASF-HOODIE-001" href="mailto:anmolmishra848076@email.com" aria-label="Contact to buy ASF Hoodie">Buy</a>
+              <a class="btn" href="mailto:anmolmishra848076@email.com" aria-label="Contact to buy ASF Hoodie">Buy</a>
             </div>
           </article>
 
@@ -306,10 +346,10 @@
               <source type="image/webp" srcset="/docs/assets/sneakers-800.webp 800w, /docs/assets/sneakers-400.webp 400w">
               <img src="/docs/assets/sneakers.svg" srcset="/docs/assets/sneakers-400.svg 400w, /docs/assets/sneakers-800.svg 800w" sizes="(max-width:720px) 100vw, 33vw" alt="White sneakers on a dark background" loading="lazy">
             </picture>
-            <h4 id="p3-title"><a href="products/sneakers.html" style="color:inherit;text-decoration:none">Sneakers</a></h4>
+            <h4 id="p3-title">Sneakers</h4>
             <div class="meta">
               <div class="price" aria-label="Price in Indian Rupees">₹1999</div>
-              <a class="btn buy-btn" data-product-id="ASF-SNK-001" href="mailto:anmolmishra848076@email.com" aria-label="Contact to buy Sneakers">Buy</a>
+              <a class="btn" href="mailto:anmolmishra848076@email.com" aria-label="Contact to buy Sneakers">Buy</a>
             </div>
           </article>
         </div>
@@ -327,60 +367,5 @@
       <div style="margin-top:8px;color:var(--muted);font-size:.9rem">Made with care • Contact: <a href="mailto:anmolmishra848076@email.com" style="color:inherit;text-decoration:underline">anmolmishra848076@email.com</a></div>
     </div>
   </footer>
-
-  <!-- Cookie consent banner -->
-  <div id="asfCookie" class="cookie-banner" style="display:none">
-    <p>We use analytics cookies to improve the site. By clicking Accept you consent to analytics tracking.</p>
-    <div style="margin-left:auto;display:flex;gap:8px;align-items:center">
-      <button id="asfAccept">Accept</button>
-      <button id="asfReject" style="background:transparent;border:1px solid rgba(255,255,255,0.12);color:#fff;padding:8px 12px;border-radius:6px">Reject</button>
-    </div>
-  </div>
-
-  <script>
-    // Cookie consent handling and event tracking
-    (function(){
-      var banner = document.getElementById('asfCookie');
-      var accept = document.getElementById('asfAccept');
-      var reject = document.getElementById('asfReject');
-      var CONSENT_KEY = 'asf_analytics_consent';
-
-      function hasConsent(){ return localStorage.getItem(CONSENT_KEY) === 'granted'; }
-      function denied(){ return localStorage.getItem(CONSENT_KEY) === 'denied'; }
-
-      function showBanner(){ if(!hasConsent() && !denied()){ banner.style.display = 'flex'; }}
-      function hideBanner(){ banner.style.display = 'none'; }
-
-      accept.addEventListener('click', function(){
-        localStorage.setItem(CONSENT_KEY,'granted');
-        hideBanner();
-        // load GA if ID provided
-        try{ window.asfGA.load(); } catch(e){}
-        if(typeof gtag === 'function'){
-          gtag('consent','update',{'analytics_storage':'granted'});
-        }
-      });
-
-      reject.addEventListener('click', function(){
-        localStorage.setItem(CONSENT_KEY,'denied');
-        hideBanner();
-      });
-
-      // Attach buy button tracking for contact clicks
-      document.addEventListener('DOMContentLoaded', function(){
-        showBanner();
-        document.querySelectorAll('.buy-btn').forEach(function(btn){
-          btn.addEventListener('click', function(){
-            var pid = this.getAttribute('data-product-id') || 'unknown';
-            // Send GA event if available
-            if(typeof gtag === 'function'){
-              gtag('event','select_item',{ 'items': [{'id': pid, 'name': this.closest('.card').querySelector('h4').innerText}] });
-              gtag('event','contact_click',{ 'event_category':'engagement', 'event_label': pid, 'transport_type': 'beacon' });
-            }
-          });
-        });
-      });
-    })();
-  </script>
 </body>
 </html>
